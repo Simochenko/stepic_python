@@ -20,11 +20,11 @@
 # print('Искомое число =', last_digit * 10 + first_digit)
 # Задача 4. Напишите программу, в которую вводится трёхзначное число и которая выводит на экран его цифры (через запятую).
 
-num = int(input())
-digit3 = num % 10
-digit2 = (num // 10) % 10
-digit1 = num // 100
-print(digit1, digit2, digit3, sep=',')
+# num = int(input())
+# digit3 = num % 10
+# digit2 = (num // 10) % 10
+# digit1 = num // 100
+# print(digit1, digit2, digit3, sep=',')
 
 # num = int(input())
 # d3 = num % 10
