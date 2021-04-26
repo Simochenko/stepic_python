@@ -167,7 +167,6 @@ print(n, m)
 Формальные параметры – переменные, которые мы пишем при описании функции. Фактические параметры – то, что реально
 подставляется при вызове функции.'''
 
-
 # def print_number(a, b, c):
 #     d = (a + c) // b
 #     print(d)
@@ -192,20 +191,102 @@ print(n, m)
 #
 # print_text('Python', 4)
 # объявление функции
+'''Звездный треугольник
+Напишите функцию draw_triangle(fill, base), которая принимает два параметра:
+
+fill – символ заполнитель;
+base – величина основания равнобедренного треугольника;
+а затем выводит его.
+
+Примечание. Гарантируется, что основание треугольника – нечетное число.
+
+Sample Input 1:
+
+*
+9
+Sample Output 1:
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+'''
+
+#
+# def draw_triangle(fill, base):
+#     for i in range(1, base // 2 + 2):
+#         print(fill * i, end='')
+#         print()
+#     for i in range(base // 2, 0, -1):
+#         print(fill * i, end='')
+#         print()
+#
+#
+# # считываем данные
+# fill = input()
+# base = int(input())
+#
+# # вызываем функцию
+# draw_triangle(fill, base)
+'''ФИО
+Напишите функцию print_fio(name, surname, patronymic), которая принимает три параметра:
+
+name – имя человека;
+surname – фамилия человека;
+patronymic – отчество человека;
+а затем выводит на печать ФИО человека.
+
+Примечание. Предусмотрите тот факт, что все три буквы в ФИО должны иметь верхний регистр.
+
+Sample Input 1:
+
+Александр
+Пушкин
+Сергеевич
+Sample Output 1:
+
+ПАС'''
+
+# объявление функции
 
 
-def draw_triangle(fill, base):
-    for i in range(1, base // 2 + 2):
-        print(fill * i, end='')
-        print()
-    for i in range(base // 2, 0, -1):
-        print(fill * i, end='')
-        print()
+# def print_fio(name, surname, patronymic):
+#     print(surname[0], name[0], patronymic[0], sep='')
+#
+#
+# # считываем данные
+# name, surname, patronymic = input(), input(), input()
+#
+# # вызываем функцию
+# print_fio(name.upper(), surname.upper(), patronymic.upper())
+'''FIO'''  # объявление функции
+# def print_fio(name, surname, patronymic):
+#     print(f"{surname[0]}{name[0]}{patronymic[0]}".upper())
+#
+#
+# name, surname, patronymic = input(), input(), input(),
+# print_fio(name, surname, patronymic)
+
+
+
+
+# объявление функции
+def print_digit_sum(num):
+    total = 0
+    while num != 0:
+        last_digit = num % 10
+        total += last_digit
+        num = num // 10
+    print(total)
 
 
 # считываем данные
-fill = input()
-base = int(input())
+num = int(input())
 
 # вызываем функцию
-draw_triangle(fill, base)
+print_digit_sum(num)
